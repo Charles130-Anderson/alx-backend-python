@@ -4,7 +4,7 @@
 Zooms in on a list by repeating each element based on a given factor.
 """
 
-from typing import List
+from typing import Union, Any, Mapping, Tuple, List
 
 
 def zoom_array(lst: List, factor: int = 2) -> List:
