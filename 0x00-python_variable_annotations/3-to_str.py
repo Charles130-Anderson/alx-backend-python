@@ -7,4 +7,3 @@
 def to_str(n: float) -> str:
     '''A function that returns the string quivalent of any float argument'''
     return str(n)
-
