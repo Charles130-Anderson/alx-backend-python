@@ -1,5 +1,7 @@
 # 0x00. Python - Variable Annotations
 
+![image](https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/e65a158a-23e0-47c9-931a-7d7444fcf413)
+
 ## Project Overview
 
 This project focuses on learning and applying type annotations in Python 3, specifying function signatures, variable types, and utilizing mypy for code validation. Below are the tasks and requirements for this project.
