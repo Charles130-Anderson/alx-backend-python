@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3i
 """
 This module contains an async
 routine that spawns multiple
@@ -28,5 +28,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         order.
     """
     wait_random = __import__('0-basic_async_syntax').wait_random
-    delay_list = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
+    # Break the line into two parts for clarity
+    coroutines = (wait_random(max_delay) for _ in range(n))
+    delay_list = await asyncio.gather(*coroutines)
     return sorted(delay_list)
