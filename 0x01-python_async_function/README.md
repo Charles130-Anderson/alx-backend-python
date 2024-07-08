@@ -2,9 +2,9 @@
 
 ## Resources
 
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: flex-end;">
     <img src="https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/071c431c-3c15-4ecb-ada7-342ed7c1cffb" alt="Image 1" style="width: 50%;">
-    <img src="https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/0e649fe6-16a5-4541-a571-bd43ebeb7204" alt="Image 2" style="width: 50%;">
+    <img src="https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/0e649fe6-16a5-4541-a571-bd43ebeb7204" alt="Image 2" style="width: 50%; margin-left: 5px;">
 </div>
 
 ### Read or watch:-
