@@ -1,24 +1,30 @@
 #!/usr/bin/env python3
 
-
-from typing import List
-
-
-''' Take the code from wait_n and alter it into a new function task_wait_n.
-    The code is nearly identical to wait_n except task_wait_random is being
-    called.
+'''
+Description: Convert wait_n to task_wait_n.
+             Similar to wait_n, uses task_wait_random.
+Arguments: n: int, max_delay: int = 10
 '''
 
+from typing import List
+import asyncio
+import random
 
-async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    '''Runs an async function for n times and adds the results into a list'''
-    modified_random = __import__('3-tasks').task_wait_random
+# Dynamically import task_wait_random
+task_wait_random = __import__('3-tasks').task_wait_random
 
+
+async def task_wait_n(n: int, max_delay: int = 10) -> List[float]:
+    '''Run task_wait_random and return sorted delay list'''
+    spawn_tasks = []
     delay_list = []
-    i = 0
 
-    while i < n:
-        delay_list.append(await modified_random(max_delay))
-        i += 1
+    for i in range(n):
+        delayed_task = task_wait_random(max_delay)
+        delayed_task.add_done_callback(lambda x: delay_list.append(x.result()))
+        spawn_tasks.append(delayed_task)
+
+    for task in spawn_tasks:
+        await task
 
     return sorted(delay_list)
