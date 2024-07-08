@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/071c431c-3c15-4ecb-ada7-342ed7c1cffb)
 
-![GIF](https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/dd35ded5-4898-41da-89c0-fc6c867a7eef.gif)
+![image](https://github.com/Charles130-Anderson/alx-backend-python/assets/138807102/0e649fe6-16a5-4541-a571-bd43ebeb7204)
 
 ## Resources
 
