@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 
+
 from typing import List
 
-'''
-Convert wait_n to task_wait_n.
-Similar to wait_n, uses task_wait_random.
+
+''' Take the code from wait_n and alter it into a new function task_wait_n.
+    The code is nearly identical to wait_n except task_wait_random is being
+    called.
 '''
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    '''Run async function n times.'''
+    '''Runs an async function for n times and adds the results into a list'''
     modified_random = __import__('3-tasks').task_wait_random
 
     delay_list = []
