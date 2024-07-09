@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Collect numbers via async comprehension."""
 
 from typing import List
