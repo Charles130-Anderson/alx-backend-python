@@ -36,7 +36,7 @@ class TestGithubOrgClient(unittest.TestCase):
                    new_callable=PropertyMock) as mock_org:
             mock_org.return_value = {
                 "repos_url": "https://api.github.com/orgs/test/repos"
-            }
+            } 
             client = GithubOrgClient("test")
             result = client._public_repos_url
 
@@ -54,7 +54,8 @@ class TestGithubOrgClient(unittest.TestCase):
         with patch('client.GithubOrgClient._public_repos_url',
                    new_callable=PropertyMock) as mock_public_repos_url:
             mock_public_repos_url.return_value = (
-                "https://api.github.com/orgs/test/repos")
+                "https://api.github.com/orgs/test/repos"
+            )
 
             client = GithubOrgClient("test")
             result = client.public_repos()
@@ -62,7 +63,18 @@ class TestGithubOrgClient(unittest.TestCase):
             self.assertEqual(result, ["repo1", "repo2"])
             mock_public_repos_url.assert_called_once()
             mock_get_json.assert_called_once_with(
-                "https://api.github.com/orgs/test/repos")
+                "https://api.github.com/orgs/test/repos"
+            )
+
+    @parameterized.expand([
+        ({"license": {"key": "my_license"}}, "my_license", True),
+        ({"license": {"key": "other_license"}}, "my_license", False)
+    ])
+    def test_has_license(self, repo, license_key, expected_result):
+        """Test has_license method"""
+        client = GithubOrgClient("test")
+        result = client.has_license(repo, license_key)
+        self.assertEqual(result, expected_result)
 
 
 if __name__ == '__main__':
