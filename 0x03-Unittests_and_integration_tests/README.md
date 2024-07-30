@@ -1,5 +1,6 @@
 # Project: 0x03. Unittests and Integration Tests
-![Gif](https://github.com/user-attachments/assets/2ab6bc7c-c18c-4e63-938b-d473919fc6c5.gif)
+
+![image](https://github.com/user-attachments/assets/0763dab5-58da-42b6-8272-466567a6922c)
 
 ## Resources
 
