@@ -1,4 +1,5 @@
 # Project: 0x03. Unittests and Integration Tests
+![Gif](https://github.com/user-attachments/assets/2ab6bc7c-c18c-4e63-938b-d473919fc6c5.gif)
 
 ## Resources
 
@@ -127,7 +128,6 @@ Test that the mocked property and the mocked `get_json` was called once.
 Implement `TestGithubOrgClient.test_has_license` to unit-test `GithubOrgClient.has_license`.
 
 Parametrize the test with the following inputs
-![GIF](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/1/f088970b450e82c881ea.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240730%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240730T153438Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=85973330c51cad51b0e9dc63d8144b9d107b4b38f177d195eff0e5dec7be2d5b.gif)
 
 ```bash
 repo={"license": {"key": "my_license"}}, license_key="my_license"
